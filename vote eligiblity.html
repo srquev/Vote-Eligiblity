@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Age </title>
+    <!--CSS START-->
+    <style>
+        body{background: #333;}
+        @media screen and (max-width: 480px) {
+    body {
+        background-color: #000;
+      }
+   
+}
+        
+        h2{color:#fff;
+           text-align: center;}
+        
+        #ip{
+            width:100%;
+            font-size:30px;
+            background: #333;
+            color:#fff;
+            border:2px solid #ff6666;
+            outline: none;
+              }
+        
+        #inner{margin:0px 100px;}
+        
+        #btn{
+            background: #ff6666;
+            border:none;
+            width:100%;
+            font-weight:bolder;
+            color:#fff;
+            outline: inherit;
+            margin: 40px 50px 0px 0px; 
+            padding:10px 0px;
+            border-radius: 20px;
+            }
+       
+        #btn:hover{background:#ff5555;
+                   cursor: pointer;}
+       
+        #demo{color:#fff;
+            margin-top: 50px;}
+        
+        #outer{
+            border:6px solid #ff5555;
+            height: 450px;}
+        
+        h2{margin-top: 80px;}
+        
+        p{padding:0 10px 0 10px;
+          color:#fff;}
+            
+    </style>
+    <!--CSS END-->
+</head>
+<body>
+     <div id='outer'>
+  <p>You should begin by checking if you meet the eligibility criteria for voting.
+  </p>
+   <h2>Enter your age to check</h2><br><br>
+   <div id="inner">
+       <input  id='ip' type="text" value="18">
+       <button id="btn" onClick="ageCal()">CHECK</button>
+       <p id="demo"></p>
+   </div>
+     </div>
+     <!--JAVA SCRIPT START-->
+    <script>
+        function ageCal()
+        {
+        let age=document.getElementById('ip').value;
+        let voteable=(age<18)?"Too young ":"Old enough ";
+        document.getElementById('demo').innerHTML=voteable+"to vote.";
+        }
+    </script>
+    <!--JAVA SCRIPT END-->
+    
+</body>
+</html>
